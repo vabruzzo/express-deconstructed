@@ -19,4 +19,4 @@ app.use("*", routeHandler);
 // start the server
 app.listen(3000);
 
-app.fakeRequest("http://www.vincent.com");
+app._processRequest("http://www.vincent.com");
