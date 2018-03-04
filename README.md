@@ -11,7 +11,7 @@ I wanted to explain what's going on under the hood in express. This small projec
 
 Some takeaways this exercise is meant to illustrate:
 
-_NOTE:_ the actual implementation of express is much more complicated. This simplified implementation is intended only to convey conceptually what is going on under the hood to foster an understanding of the core concepts involved (middleware, the request and response objects, the request/response cycle, the `next` function, the use `method`, etc.).
+_NOTE:_ the actual implementation of express is much more complicated. This simplified implementation is intended only to convey conceptually what is going on under the hood to foster an understanding of the core concepts involved (middleware, the request and response objects, the request/response cycle, the `next` function, the `use` method, etc.).
 
 1.  `app.use` pushes a middleware function to a stack of middlewares, each of which is called for each incoming request until the server responds to the client.
 2.  the `next()` function simply sets a boolean, `processNextMiddleware`, to `true`. If it's not called the next middleware never gets processed, since `processNextMiddleware` will be false. Try removing a `next()` from one of the middlewares to see what happens. (the client never receives a response)
