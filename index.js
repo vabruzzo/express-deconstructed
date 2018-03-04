@@ -18,5 +18,3 @@ app.use("*", routeHandler);
 
 // start the server
 app.listen(3000);
-
-app._processRequest("http://www.vincent.com");
