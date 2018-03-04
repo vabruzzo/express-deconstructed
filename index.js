@@ -1,7 +1,7 @@
 // external dependencies
-const express = require("./express");
-const bodyParser = require("./bodyParser");
-const logger = require("./logger");
+const express = require("./fake_node_modules/express");
+const bodyParser = require("./fake_node_modules/bodyParser");
+const logger = require("./fake_node_modules/logger");
 
 // internal dependencies
 const routeHandler = require("./routeHandler");
